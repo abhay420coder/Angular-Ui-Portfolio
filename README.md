@@ -6,10 +6,10 @@
 
 * step-2
   * syntax :- `ng build --configuration production --base-href "https://<user-name>.github.io/<repo>/"`
-  * example :-  `ng build --configuration production --base-href "https://abhay420coder.github.io/frontend-assignment/"`
+  * example :-  `ng build --configuration production --base-href "https://abhay420coder.github.io/Angular-Ui-Portfolio/"`
 
 * step-3
-  * `ngh --dir dist/frontend-assignment`
+  * `ngh --dir dist/angular-ui-portfolio`
 
 
 ## deploy step on next time
@@ -18,7 +18,7 @@
   * example :-  `ng build --configuration production --base-href "https://abhay420coder.github.io/Angular-Ui-Portfolio/"`
 
 * step-2
-  * `ngh --dir dist/frontend-assignment`
+  * `ngh --dir dist/angular-ui-portfolio`
 
 
 

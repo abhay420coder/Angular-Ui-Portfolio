@@ -12,10 +12,10 @@
               </div>
               <ul #childMenu class="childMenu ml-4 hidden" >
                 <li *ngFor="let submenu of menu.subMenus" (click)="$event.stopPropagation();">
-                  <a  class="p-2 hover:bg-gray-700 flex items-center" [title]="submenu.subMenuName" (click)="childMenuOpen(submenu)">
+                  <button  class="p-2 w-full active:scale-90 hover:bg-gray-700 flex items-center" [title]="submenu.subMenuName" (click)="childMenuOpen(submenu)">
                     <i class="fas fa-chevron-right mr-2 text-xs"></i>
                     <span class="truncate">{{submenu.subMenuName}}</span>
-                  </a>
+                  </button>
                 </li>
               </ul>
         </li>

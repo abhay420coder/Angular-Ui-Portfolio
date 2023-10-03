@@ -1,11 +1,11 @@
 const menu1 =  {
-    menuName:"menu 1" , 
+    menuName:"PortFolio" , 
     menuPath:'' ,
     subMenus:[
-      { subMenuName:"menu 1 submenu 1" , subMenuPath:'' ,},
-      { subMenuName:"menu 1 submenu 2" , subMenuPath:'' ,},
-      { subMenuName:"menu 1 submenu 3" , subMenuPath:'' ,},
-      { subMenuName:"menu 1 submenu 4" , subMenuPath:'' ,},
+      { subMenuName:"Home" , subMenuPath:'/abhay/home' ,},
+      { subMenuName:"About Me" , subMenuPath:'/abhay/about' ,},
+      { subMenuName:"Our Services" , subMenuPath:'/abhay/services' ,},
+      { subMenuName:"Contact - Us" , subMenuPath:'/abhay/contact-us' ,},
     ]
   } 
 

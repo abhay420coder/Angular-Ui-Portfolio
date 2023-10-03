@@ -2,7 +2,7 @@
   <aside  class="bg-gray-800 text-white w-44  p-4 fixed  top-12 bottom-0"  >
     <nav class="max-h-[85vh] overflow-y-scroll no-scrollbar">
       <ul class="space-y-2">
-        <li *ngFor="let menu of menus" #parentMenu class="parentMenu" (click)="parentToggle(parentMenu , childMenu);">
+        <li *ngFor="let menu of menus" #parentMenu class="parentMenu" (click)="parentToggle(parentMenu , childMenu , menu);">
             <!-- $event.stopPropagation() -->
             <div class="flex items-center justify-between p-2 hover:bg-gray-700" [title]="menu.menuName">
                 <div class="flex items-center">
@@ -12,7 +12,7 @@
               </div>
               <ul #childMenu class="childMenu ml-4 hidden" >
                 <li *ngFor="let submenu of menu.subMenus" (click)="$event.stopPropagation();">
-                  <a href="#" class="p-2 hover:bg-gray-700 flex items-center" [title]="submenu.subMenuName">
+                  <a  class="p-2 hover:bg-gray-700 flex items-center" [title]="submenu.subMenuName" (click)="childMenuOpen(submenu)">
                     <i class="fas fa-chevron-right mr-2 text-xs"></i>
                     <span class="truncate">{{submenu.subMenuName}}</span>
                   </a>

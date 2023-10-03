@@ -1,0 +1,24 @@
+  <!-- Navegación lateral -->
+  <aside  class="bg-gray-800 text-white w-44  p-4 fixed  top-12 bottom-0"  >
+    <nav class="max-h-[85vh] overflow-y-scroll no-scrollbar">
+      <ul class="space-y-2">
+        <li *ngFor="let menu of menus" #parentMenu class="parentMenu" (click)="parentToggle(parentMenu , childMenu);">
+            <!-- $event.stopPropagation() -->
+            <div class="flex items-center justify-between p-2 hover:bg-gray-700" [title]="menu.menuName">
+                <div class="flex items-center">
+                  <span class="truncate">{{menu.menuName}}</span>
+                </div>
+                <i *ngIf="menu?.subMenus?.length" class="fas fa-chevron-down text-xs"></i>
+              </div>
+              <ul #childMenu class="childMenu ml-4 hidden" >
+                <li *ngFor="let submenu of menu.subMenus" (click)="$event.stopPropagation();">
+                  <a href="#" class="p-2 hover:bg-gray-700 flex items-center" [title]="submenu.subMenuName">
+                    <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                    <span class="truncate">{{submenu.subMenuName}}</span>
+                  </a>
+                </li>
+              </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
